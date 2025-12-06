@@ -119,6 +119,8 @@ public class GaleShapley {
 
                 matchedStudents.add(receiver);
                 matchedStudents.add(proposer);
+
+                System.out.println(receiver.getName() + "----" + proposer.getName());
             }
         }
     }

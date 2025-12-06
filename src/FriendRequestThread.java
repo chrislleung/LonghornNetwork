@@ -35,6 +35,8 @@ public class FriendRequestThread implements Runnable {
     public void run() {
         try{
             semaphore.acquire();
+            sender.addFriend(receiver);
+            receiver.addFriend(sender);
             System.out.println("FriendRequest (Thread-safe): " +sender.name + " sent a friend request to " +receiver.name);
         } catch (InterruptedException e){
             Thread.currentThread().interrupt();
